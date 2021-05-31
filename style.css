@@ -33,3 +33,33 @@
     grid-template-rows: 33% 33% 33%;
     max-width: 300px;
 }
+
+.box {
+    display:flex;
+    border: 1px solid white;
+    min-height: 100px;
+    min-width: 100px;
+    justify-content:center;
+    align-items:center;
+    cursor: pointer;
+}
+
+.hide{
+    display:none;
+}
+
+.control{
+    align-items: center;
+    display:flex;
+    justify-content:center;
+    margin-top: 1em;
+}
+
+#reset {
+    padding: 8px;
+    border:none;
+    border-radius: 5px;
+    background-color: red;
+    color:white;
+    cursor:pointer;
+}
