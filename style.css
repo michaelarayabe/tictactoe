@@ -1,0 +1,35 @@
+* {
+    margin : 0;
+    padding: 0;
+    font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.board-background {
+    background-color: black;
+    height: 100vh;
+    padding-top:1px;
+   
+    
+}
+
+.title {
+    color:white;
+    margin-top: 10%;
+    text-align:center;
+    
+}
+
+.display {
+    color:white;
+    text-align:center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+}
