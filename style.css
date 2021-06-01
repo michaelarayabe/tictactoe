@@ -24,6 +24,7 @@
     text-align:center;
     margin-top: 1em;
     margin-bottom: 1em;
+    font-size: 20px;
 }
 
 .display span{
@@ -46,6 +47,10 @@
     justify-content:center;
     align-items:center;
     cursor: pointer;
+}
+.x,
+.o {
+    cursor:default;
 }
 
 .x::after {

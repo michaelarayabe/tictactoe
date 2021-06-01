@@ -1,7 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
 
     //HTML elements
-
     const displayDiv = document.querySelector('.display');
     const boxDivs = document.querySelectorAll('.box');
     const resetDiv = document.querySelector('#reset');
@@ -16,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const playerX = 'X';
     const playerO = 'O';
 
-    //win message
+    //Win message
     const handleWin = (letter) => {
         gameIsActive = false;
         winner = letter;
@@ -84,15 +83,19 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     
 
-    //Event handler
-    const handleDisplayDiv = (e) => {
-        console.log(e);
-    }
-
+    //Handling reset button
     const handleReset = (e) => {
-        console.log(e);
+        xTurn = true;
+        displayDiv.innerHTML = `${playerX} starts! `;
+       for(const boxDiv of boxDivs){
+           boxDiv.classList.remove('x');
+           boxDiv.classList.remove('o');
+       }
+       gameIsActive = true;
+       winner = null;
     }
 
+    //Handing clicks in boxes 
     const handleBoxClick = (e) => {
         const classList = e.target.classList;
         if(winner || !gameIsActive){
@@ -112,9 +115,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
     }
-
-    //Add event listener
-    displayDiv.addEventListener('click', handleDisplayDiv);
+    
     resetDiv.addEventListener('click', handleReset);
     
     for(const boxDiv of boxDivs){
