@@ -26,6 +26,10 @@
     margin-bottom: 1em;
 }
 
+.display span{
+    color: red;
+}
+
 .container {
     margin: 0 auto;
     display: grid;
