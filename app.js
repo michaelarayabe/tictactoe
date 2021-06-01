@@ -6,6 +6,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const boxDivs = document.querySelectorAll('.box');
     const resetDiv = document.querySelector('#reset');
 
+    //Variables
+    let gameIsActive = true;
+    let xTurn = true;
+    let winner = null;
+    
+
     //Event handler
     const handleDisplayDiv = (e) => {
         console.log(e);
@@ -15,8 +21,18 @@ window.addEventListener('DOMContentLoaded', () => {
         console.log(e);
     }
 
-    const handleBoxDiv = (e) => {
-        console.log(e);
+    const handleBoxClick = (e) => {
+        const classList = e.target.classList;
+        if(classList[1] === 'x' || classList[1] === 'o'){
+            return;
+        }
+        if(xTurn){
+            classList[1] = classList.add('x');
+            xTurn = !xTurn;
+        }else {
+            classList[1] = classList.add('o')
+            xTurn = !xTurn;
+        }
     }
 
 
@@ -29,6 +45,6 @@ window.addEventListener('DOMContentLoaded', () => {
     resetDiv.addEventListener('click', handleReset);
     
     for(const boxDiv of boxDivs){
-        boxDiv.addEventListener('click', handleBoxDiv);
+        boxDiv.addEventListener('click', handleBoxClick);
     }
 });

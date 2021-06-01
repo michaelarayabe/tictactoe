@@ -44,6 +44,19 @@
     cursor: pointer;
 }
 
+.x::after {
+    content: 'X';
+    color: white;
+    font-size: 50px;
+}
+
+.o::after {
+    content: 'O';
+    color:white;
+    font-size: 50px;
+}
+
+
 .hide{
     display:none;
 }
