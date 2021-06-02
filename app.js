@@ -27,7 +27,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //Check game status
     const checkGameStatus = () => {
-        
+
+        //Identify each box
         const topLeft = boxDivs[0].classList[1];
         const topMiddle = boxDivs[1].classList[1];
         const topRight = boxDivs[2].classList[1];
@@ -83,7 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
     
 
     //Handling reset button
-    const handleReset = (e) => {
+    const handleReset = () => {
         xTurn = true;
         displayDiv.innerHTML = `${playerX} starts! `;
        for(const boxDiv of boxDivs){
