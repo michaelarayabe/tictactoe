@@ -4,7 +4,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const displayDiv = document.querySelector('.display');
     const boxDivs = document.querySelectorAll('.box');
     const resetDiv = document.querySelector('#reset');
-    const announcerDiv = document.querySelector('.announcer');
 
     //Variables
     let gameIsActive = true;
@@ -49,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }else if(middleLeft && middleLeft === middleMiddle && middleMiddle === middleRight){
             handleWin(middleLeft);
             
-        }else if (bottomLeft && bottomLeft == bottomMiddle && bottomMiddle === bottomRight){
+        }else if (bottomLeft && bottomLeft === bottomMiddle && bottomMiddle === bottomRight){
             handleWin(bottomLeft)
            
         }else if (topLeft && topLeft === middleLeft && middleLeft === bottomLeft){
